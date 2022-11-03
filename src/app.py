@@ -63,25 +63,25 @@ def data():
         )
     return render_template("data_view_home.html", n=len(STATE_NAME_LIST), sl=STATE_NAME_LIST)
 
-@app.route("/data/download/<string:state>/<string:filetype>")
-def download(state: str, filetype: str) -> Response:
-    if filetype == "json":
-        file_json = send_file(
-            f"../resources/downloads/json/data_{state}.json",
-            mimetype="application/json",
-            download_name=f"data_{state}.json",
-            as_attachment=True,
-        )
-        return file_json
+# @app.route("/data/download/<string:state>/<string:filetype>")
+# def download(state: str, filetype: str) -> Response:
+#     if filetype == "json":
+#         file_json = send_file(
+#             f"../resources/downloads/json/data_{state}.json",
+#             mimetype="application/json",
+#             download_name=f"data_{state}.json",
+#             as_attachment=True,
+#         )
+#         return file_json
 
-    elif filetype == "csv":
-        file_csv = send_file(
-            f"../resources/downloads/csv/data_{state}.csv",
-            mimetype="text/csv",
-            download_name=f"data_{state}.csv",
-            as_attachment=True,
-        )
-        return file_csv
+#     elif filetype == "csv":
+#         file_csv = send_file(
+#             f"../resources/downloads/csv/data_{state}.csv",
+#             mimetype="text/csv",
+#             download_name=f"data_{state}.csv",
+#             as_attachment=True,
+#         )
+#         return file_csv
 
 
 if __name__ == '__main__':
