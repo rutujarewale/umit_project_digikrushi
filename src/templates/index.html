@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href="{{url_for('static', filename='style.css')}}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{{url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+  <link rel="icon" href="{{url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+  <title>DigiKrushi</title>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{url_for('static', filename='img/ss1.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>DigiKrushi</h5>
+            <p>Helping hand for farmers.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{url_for('static', filename='img/ss2.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>DigiKrushi</h5>
+            <p>Cultivating ideas for growth.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{url_for('static', filename='img/ss3.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>DigiKrushi</h5>
+            <p>Power of digital to improve farmer income.</p>.</p>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <section class="m-5">
+      <div >
+        <h2 class="text-center" id="about">About Us</h2>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 col-12">
+            <img src="{{url_for('static', filename='img/ab1.png')}}" class="img-fluid aboutimg" >
+        </div>
+        <div class="col-lg-6 col-12">
+          <h2 class="display-4">We Are DigiKrushi</h2>
+          <p class="py-4">A website that enables farmers to study and compare the ag-related data - market prices, historical crop yield,etc which will help the farmer increase the yield and profit in produce.</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 col-12">
+          <img src="{{url_for('static', filename='img/analysis.png')}}" class="img-fluid aboutimg">
+        </div>
+        <div class="col-lg-6 col-12">
+          <h4 class="display-4">Access <a href="/data">Data</a></h4>
+          <p class="py-4">Access data on all India and State wise land use classification, gross and net irrigated area, the irrigated area under crops and area under crops with the purpose of showing existing land distribution according to actual use. This dataset provides information on statistics for different type of crops and seasons.</p>
+        </div>
+      </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+  {% include 'footer.html' %}
+</body>
